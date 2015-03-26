@@ -1,0 +1,16 @@
+{
+  "name": "cerad-ang-blog",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Angular Blog",
+  "repository": "https://github.com/cerad/ang-blog.git",
+  "license": "TBD",
+  "devDependencies": {
+    "karma": "~0.12.31",
+    "karma-junit-reporter": "~0.2.2",
+    "protractor": "~2.0.0",
+    "shelljs": "~0.4.0",
+    "bower": "~1.3.12"
+  },
+  "scripts": {}
+}
