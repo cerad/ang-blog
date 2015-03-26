@@ -18,3 +18,8 @@ In general, I think all of the above could be global but at least it documents t
 copied and emptied bower.json
 bower install angular angular-route angular-mocks 
 
+Added gulpfile to copy vendor js to web/js
+Added basic index.html
+
+copied karma.conf.js
+karma start --single-run
