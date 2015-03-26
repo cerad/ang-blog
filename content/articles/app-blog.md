@@ -11,6 +11,7 @@ npm install karma-junit-reporter --save-dev
 npm install protractor --save-dev
 npm install bower --save-dev      # Already have global
 npm install shelljs --save-dev    # Probably should be global
+npm install gulp --save-dev
 
 In general, I think all of the above could be global but at least it documents the required deps.
 
