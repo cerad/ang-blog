@@ -23,3 +23,10 @@ Added basic index.html
 
 copied karma.conf.js
 karma start --single-run
+
+===============================
+Installed showdown and gulp-showdown.  Conversion is easy enough.
+
+Tried to install markdown but nothing got installed.
+showdown looks a bit newer anyways.
+need to learn about how node finds modules.

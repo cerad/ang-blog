@@ -11,7 +11,11 @@
     "protractor": "~2.0.0",
     "shelljs": "~0.4.0",
     "bower": "~1.3.12",
-    "gulp": "~3.8.11"
+    "gulp": "~3.8.11",
+    "gulp-showdown": "0.0.2"
   },
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {
+    "showdown": "~0.4.0"
+  }
 }
