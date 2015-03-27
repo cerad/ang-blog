@@ -1,14 +1,38 @@
 var 
   gulp     = require('gulp'),
   concat   = require('gulp-concat'),
-  showdown = require('gulp-showdown')
+  markdown = require('gulp-showdown')
 ;
+var scriptFiles   = [ 'ang/app.js' ];
+var markdownFiles = [ 'content/articles/*.md'];
 
-gulp.task('scripts', function() {
-  gulp.src(
-    [
-      'ang/app.js'
-    ])
+var watchTask = function() 
+{
+  buildTask();
+  
+  gulp.watch(scriptFiles,  ['scripts' ]);
+  gulp.watch(markdownFiles,['markdown']);
+};
+gulp.task('watch',watchTask);
+
+var buildTask = function()
+{
+  scriptsTask();
+  markdownTask();
+};
+gulp.task('build',buildTask);
+
+var markdownTask = function() 
+{
+  gulp.src(markdownFiles)
+    .pipe(markdown())
+    .pipe(gulp.dest('web/articles'));
+};
+gulp.task('markdown',markdownTask);
+
+var scriptsTask = function() 
+{
+  gulp.src(scriptFiles)
     .pipe(concat('app.js'))
     .pipe(gulp.dest('web/js'));
     
@@ -26,13 +50,5 @@ gulp.task('scripts', function() {
       'bower_components/angular-route/angular-route.min.js.map'
     ])
     .pipe(gulp.dest('web/js'));
-});
-gulp.task('md2html', function() {
-  gulp.src('content/articles/*.md')
-    .pipe(showdown())
-    .pipe(gulp.dest('web/articles'));
-});
-
-gulp.task('default', function() {
-  
-});
+};
+gulp.task('scripts', scriptsTask);

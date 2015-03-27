@@ -30,3 +30,8 @@ Installed showdown and gulp-showdown.  Conversion is easy enough.
 Tried to install markdown but nothing got installed.
 showdown looks a bit newer anyways.
 need to learn about how node finds modules.
+
+Added watch to gulpfile.
+Change 1.
+Change 2.
+
